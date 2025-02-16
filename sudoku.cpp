@@ -8,14 +8,14 @@
 // Artem Ivanov, MIPT, Phystech-School AMCS.
 // Feb 2025
 
-#include <chrono>
-#include <fstream>
-#include <iostream>
-#include <vector>
+#include <chrono>    //working time
+#include <fstream>   //csv output
+#include <iostream>  //std lib
+#include <vector>    //vector lib
 
-const int cSheetSize = 9;
+const int cSheetSize = 9;  // size of sheet
 
-class Cells {
+class Cells {  // class for draw cell
  private:
   std::vector<bool> IsPosible_ = std::vector<bool>(cSheetSize, true);
   int count_ = cSheetSize;
@@ -38,7 +38,7 @@ class Cells {
   }
 };
 
-class DrawField {
+class DrawField {  // class for draw field
  private:
   int count_free_cells_ = cSheetSize * cSheetSize;
   std::vector<std::vector<Cells>> draw_field_ = std::vector<std::vector<Cells>>(
@@ -95,42 +95,45 @@ class DrawField {
 
 void Printing(std::vector<std::vector<int>>& field,
               std::vector<std::vector<bool>>& is_input, bool to_console = true,
-              bool to_csv = true, bool highlight = true);
+              bool to_csv = true,
+              bool highlight = true);  // function to get output
 
 void Input(std::vector<std::vector<int>>& field,
-           std::vector<std::vector<bool>>& is_input, DrawField& draw_field);
+           std::vector<std::vector<bool>>& is_input,
+           DrawField& draw_field);  // function which get input
 
 int main() {
   std::vector<std::vector<int>> field = std::vector<std::vector<int>>(
-      cSheetSize, std::vector<int>(cSheetSize, 0));
+      cSheetSize, std::vector<int>(cSheetSize, 0));  // main field
   std::vector<std::vector<bool>> is_input = std::vector<std::vector<bool>>(
-      cSheetSize, std::vector<bool>(cSheetSize, false));
+      cSheetSize,
+      std::vector<bool>(cSheetSize, false));  // field which store start field
 
-  DrawField draw_field;
+  DrawField draw_field;  // draw field
 
   Input(field, is_input, draw_field);
 
   std::cout << "processing...\n";
 
-  auto start = std::chrono::high_resolution_clock::now();
+  auto start = std::chrono::high_resolution_clock::now();  // start timepoint
 
   while (draw_field.CountFreeCells() != 0) {
     if (draw_field.Filling(field)) {
-      continue;
+      continue;  // recursively place one-possible digit
     }
     // Will be soon
   }
 
-  auto end = std::chrono::high_resolution_clock::now();
+  auto end = std::chrono::high_resolution_clock::now();  // end timepoint
 
   double mseconds =
       std::chrono::duration_cast<std::chrono::milliseconds>(end - start)
-          .count();
+          .count();  // calculate time of proccessing
 
   std::cout << "done!\n"
             << "process done in " << mseconds << "ms\n";
 
-  Printing(field, is_input, true, false, true);
+  Printing(field, is_input, true, false, true);  // printing
 }
 
 void Printing(std::vector<std::vector<int>>& field,
