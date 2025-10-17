@@ -1,6 +1,4 @@
-#!/usr/bin/env python3
-# scripts/split_labels.py
-# Creates train/val splits and label->index map from dataset/labels.csv
+
 import os, json, pandas as pd
 from sklearn.model_selection import StratifiedShuffleSplit
 
