@@ -1,0 +1,7 @@
+# data.yaml
+path: ./  # путь до корня проекта
+train: images/train
+val: images/val
+
+nc: 1  # число классов
+names: ['sheet']  # название класса
