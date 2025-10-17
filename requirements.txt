@@ -1,7 +1,3 @@
-# Requirements for screren-sudoku-finder (YOLOv8 dataset & training)
-# NOTE: Install the correct torch + CUDA build for your GPU from https://pytorch.org
-# Example (Linux, CUDA 11.8): pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
-
 ultralytics>=8.0.0
 torch>=2.0.0
 torchvision>=0.15.0
@@ -14,8 +10,3 @@ matplotlib>=3.7.0
 pandas>=2.1.0
 albumentations>=1.3.0
 scikit-image>=0.20.0
-
-# Optional / development (not required for training, but useful for experiments & notebooks)
-jupyterlab
-ipykernel
-seaborn
