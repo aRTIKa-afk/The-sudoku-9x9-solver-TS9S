@@ -1,7 +1,7 @@
 task: detect
 mode: train
 model: yolov8n.pt
-data: data.yaml
+data: C:\Users\artii\Desktop\sudoku_resp\sudoku sheet recog\data.yml
 epochs: 100
 time: null
 patience: 100
@@ -13,7 +13,7 @@ cache: false
 device: cpu
 workers: 8
 project: null
-name: train
+name: train4
 exist_ok: false
 pretrained: true
 optimizer: auto
@@ -103,4 +103,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: botsort.yaml
-save_dir: C:\Users\artii\Desktop\sudoku_resp\sudoku sheet recog\runs\detect\train
+save_dir: C:\Users\artii\Desktop\sudoku_resp\sudoku sheet recog\runs\detect\train4
