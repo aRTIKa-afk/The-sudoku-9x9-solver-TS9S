@@ -1,0 +1,14 @@
+# Example commands (run from project root)
+# 1) Create venv and install dependencies:
+# python -m venv venv
+# source venv/bin/activate
+# pip install -r requirements.txt
+#
+# 2) Prepare splits:
+# python scripts/split_labels.py
+#
+# 3) Train:
+# python src/train_cnn.py --epochs 20 --batch_size 32
+#
+# 4) Inference:
+# python src/inference_cnn.py --ckpt experiments/saved_models/digit_cnn/best.pth --input_folder dataset --out_csv predictions.csv
