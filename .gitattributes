@@ -1,3 +1,5 @@
+best.pth filter=lfs diff=lfs merge=lfs -text
+best.pt filter=lfs diff=lfs merge=lfs -text
 *.pt filter=lfs diff=lfs merge=lfs -text
 *.pth filter=lfs diff=lfs merge=lfs -text
 bin/ts9s.exe filter=lfs diff=lfs merge=lfs -text
