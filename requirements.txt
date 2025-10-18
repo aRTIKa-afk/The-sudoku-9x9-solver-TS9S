@@ -1,0 +1,15 @@
+# Core ML / CV
+torch>=2.0.0
+torchvision>=0.15.0
+ultralytics>=8.0.0
+
+# Image IO / processing
+opencv-python>=4.7.0
+Pillow>=9.5.0
+numpy>=1.24.0
+pandas>=2.1.0
+tqdm>=4.65.0
+
+# Input & automation (mouse/keyboard emulation used in recogniser.py)
+mouse>=0.7.0
+keyboard>=0.13.5
