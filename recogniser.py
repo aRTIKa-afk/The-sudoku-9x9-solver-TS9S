@@ -12,7 +12,7 @@ import pandas as pd
 import time
 from ultralytics import YOLO
 
-modelY = YOLO("best.pt")
+modelY = YOLO("yolo.pt")
 
 def load_ckpt(ckpt_path, device):
     if not os.path.exists(ckpt_path):
@@ -76,7 +76,7 @@ def predict_pil_image(model, idx2label, pil_img, device='cpu', transform=None):
         label = idx2label.get(str(pred_idx), idx2label.get(pred_idx, "UNKNOWN"))
         return label, conf, logits.squeeze(0).cpu().numpy()
 
-ckpt_path = "best.pth"
+ckpt_path = "ocr.pth"
 
 
 device = torch.device('cpu')
@@ -90,6 +90,7 @@ print(results)
 x1, y1, x2, y2 = results[0].boxes[0].xyxy[0]
 x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
 print(x1, y1, x2, y2)
+
 '''
 print("Наведите курсор на левый верхний угол судоку и нажмите SPACE")
 keyboard.wait("space")
