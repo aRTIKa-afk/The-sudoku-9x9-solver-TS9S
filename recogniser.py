@@ -2,12 +2,9 @@ from PIL import ImageGrab as imgGrb
 import mouse
 import keyboard
 import os
-from PIL import Image, UnidentifiedImageError
 import torch
 from torchvision import transforms, models
-from tqdm import tqdm
 import torch.nn.functional as F
-import numpy as np
 import pandas as pd
 import time
 from ultralytics import YOLO
@@ -85,11 +82,9 @@ model, idx2label = load_ckpt(ckpt_path, device)
 screenshot = imgGrb.grab( include_layered_windows=True)
 
 results = modelY(screenshot)
-print(results)
 
 x1, y1, x2, y2 = results[0].boxes[0].xyxy[0]
 x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
-print(x1, y1, x2, y2)
 
 '''
 print("Наведите курсор на левый верхний угол судоку и нажмите SPACE")
@@ -127,6 +122,12 @@ for j in range(1, 10):
         print(num, end=' ')
         s+=num+' '
     print()
+
+print("""
+      +------------------------+
+      |   решённый вид судоку  | 
+      +------------------------+
+      """)
 
 isnt_solved = os.system(f"a.exe {s}")
 
