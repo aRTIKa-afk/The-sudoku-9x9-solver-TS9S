@@ -250,7 +250,7 @@ class MainWindow(QMainWindow):
         self.setup_instructions_tab()
         
         # Вкладка "О программе"
-        info_tab = QLabel("TS9S-AI v2.2\nManual Selection + Visual Feedback\nPowered by YOLOv8 & PyTorch")
+        info_tab = QLabel("TS9S-AI v3.0\nGUI for The-sudoku-9x9-solver-TS9S\nPowered by YOLOv8 & PyTorch")
         info_tab.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.tabs.addTab(info_tab, "О программе")
         
