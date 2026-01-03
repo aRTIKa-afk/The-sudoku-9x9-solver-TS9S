@@ -1,2 +1,18 @@
-.vscode
-cropped_image.png
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.env
+
+# PyInstaller
+*.spec
+build/
+dist/
+
+# IDE
+.vscode/
+.idea/
+
+# System
+Thumbs.db
+.DS_Store
