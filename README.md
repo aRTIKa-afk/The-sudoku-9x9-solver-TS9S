@@ -1,10 +1,10 @@
 
 # 🧩 TS9S-AI: Hybrid Sudoku Solver
 
+![C++](https://img.shields.io/badge/Solver-C%2B%2B17-red)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![PyQt6](https://img.shields.io/badge/GUI-PyQt6-green)
 ![PyTorch](https://img.shields.io/badge/ML-PyTorch%20%26%20YOLOv8-orange)
-![C++](https://img.shields.io/badge/Solver-C%2B%2B17-red)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey)
 
 **TS9S-AI** — это продвинутое десктопное приложение для автоматического решения судоку в реальном времени. Проект объединяет компьютерное зрение (Computer Vision) для распознавания поля на экране и высокопроизводительный C++ алгоритм для мгновенного поиска решения.
