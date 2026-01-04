@@ -11,14 +11,17 @@
 
 > **📥 Скачать готовую версию (Windows):**
 >
-> Перейдите в раздел **[Releases](https://github.com/ВАШ-НИК/TS9S-AI/releases/latest)** и скачайте последний ZIP-архив.
+> Перейдите в раздел **[Releases](https://github.com/aRTIKa-afk/The-sudoku-9x9-solver-TS9S/releases/latest)** и скачайте последний ZIP-архив.
 > *(Не требует установки Python и настройки окружения).*
 
 ---
 
 ## 📸 Демонстрация
 
+### Интерфейс программы
 ![Интерфейс программы](assets/screenshot_gui.png)
+
+### Использование программы
 ![Использование программы](assets/demo.gif)
 
 ---
